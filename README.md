@@ -63,7 +63,7 @@ eg.
 |-h|以大小单位显示，默认是字节|
 |-a|显示隐藏文件和目录|
 
-![linux1](E:/DeepLearning_study\md_pic\linux1.png)
+![linux1](md_pic/linux1.png)
 r读w写x执行。前三个表示自己的权限；中间表示同组用户；最后表示其他用户
 2表示硬连接次数
 Yoimiya表示用户名；yoimiya表示用户组；4096表示大小；修改时间；名字
@@ -100,7 +100,7 @@ Yoimiya表示用户名；yoimiya表示用户组；4096表示大小；修改时�
 |-i|交互式提示|
 |-v|显示移动后的路径描述|
 
-![linux3](E:/DeepLearning_study\md_pic\linux3.png)
+![linux3](md_pic/linux3.png)
 
 ##### 7、重定向命令
 重定向：把终端显示的内容保存到文件中
@@ -109,7 +109,7 @@ Yoimiya表示用户名；yoimiya表示用户组；4096表示大小；修改时�
 |> 文件名|保存后会覆盖原来的内容|
 |>> 文件名|保存后不会覆盖原来的内容|
 
-![linux4](E:/DeepLearning_study\md_pic\linux4.png)
+![linux4](md_pic/linux4.png)
 
 ##### 8、查看文件内容
 |命令|说明|
@@ -117,7 +117,7 @@ Yoimiya表示用户名；yoimiya表示用户组；4096表示大小；修改时�
 |cat|查看小型文件|
 |more|分屏查看大型文件|
 
-![linux5](E:/DeepLearning_study\md_pic\linux5.png)
+![linux5](md_pic/linux5.png)
 
 -查看文件有一些快捷键
 
@@ -156,7 +156,7 @@ grep可以结合正则表达式
 |.|匹配一个非换行符的字符|
 
 
-![linux6](E:/DeepLearning_study\md_pic\linux6.png)
+![linux6](md_pic/linux6.png)
 
 拓展：
 - grep可以搜索管道|的内容
@@ -177,7 +177,7 @@ find结合通配符使用
 |*|代表0个或多个任意字符|
 |?|代表任意一个字符|
 
-![linux7](E:/DeepLearning_study\md_pic\linux7.png)
+![linux7](md_pic/linux7.png)
 
 - 通配符也可用于ls、rm、mv等命令中
 
@@ -207,7 +207,7 @@ zip、unzip命令
 |:--:|:--:|
 |-d|解压缩到指定目录|
 
-![linux8](E:/DeepLearning_study\md_pic\linux8.png)
+![linux8](md_pic/linux8.png)
 
 - 尽量使用.gz，占用空间最小
 - zip压缩最方便，但文件最大
@@ -241,7 +241,7 @@ w写(权限值是2)
 x执行(权限值是1)
 -无任何权限(权限值是0)
 
-![linux9](E:/DeepLearning_study\md_pic\linux9.png)
+![linux9](md_pic/linux9.png)
 
 注：.py文件中#的含义
 - 注释
@@ -287,7 +287,7 @@ x执行(权限值是1)
 |-G|设置附加组|
 |-g|修改用户组|
 
-![linux10](E:/DeepLearning_study\md_pic\linux10.png)
+![linux10](md_pic/linux10.png)
 
 |gpasswd选项|说明|
 |:--:|:--:|
@@ -335,17 +335,17 @@ ssh -V
 ```
 ###### 17.1、远程登录
 使用windows连接linux
-![linux11](E:/DeepLearning_study\md_pic\linux11.png)
+![linux11](md_pic/linux11.png)
 
 在linux中查看
-![linux12](E:/DeepLearning_study\md_pic\linux12.png)
+![linux12](md_pic/linux12.png)
 
 连接成功
 
 ###### 17.2、远程拷贝
 通过scp将客户端文件拷贝到服务器：
 
-![linux13](E:/DeepLearning_study\md_pic\linux13.png)
+![linux13](md_pic/linux13.png)
 
 - 另外可使用FileZilla软件来进行拷贝
 
@@ -353,7 +353,7 @@ ssh -V
 编辑器Vim：可以使用命令来编辑，完全脱离鼠标
 
 Vim工作模式：命令模式、编辑模式、末行模式
-![linux14](E:/DeepLearning_study\md_pic\linux14.png)
+![linux14](md_pic/linux14.png)
 
 ```
 w 保存
@@ -405,7 +405,7 @@ https://www.anaconda.com/download
 ```
 nvidia-smi
 ```
-![cuda1](E:/DeepLearning_study\md_pic\cuda1.png)
+![cuda1](md_pic/cuda1.png)
 CUDA Version为CUDA支持的最高版本
 
 ###### 2.2下载CUDA
@@ -413,12 +413,12 @@ CUDA Version为CUDA支持的最高版本
 https://developer.nvidia.com/cuda-toolkit-archive
 ```
 我下载的为11.6.2版本的CUDA：
-![cuda6](E:/DeepLearning_study\md_pic\cuda6.png)
+![cuda6](md_pic/cuda6.png)
 正常下载安装后在cmd中输入
 ```
 nvcc -V
 ```
-![cuda5](E:/DeepLearning_study\md_pic\cuda5.png)
+![cuda5](md_pic/cuda5.png)
 当看到上图所示即为安装成功
 
 ###### 2.3安装cuDNN
@@ -428,9 +428,9 @@ https://developer.nvidia.com/rdp/cudnn-archive
 ```
 注意网站中的for CUDA xx.x，根据此来安装对应的cuDNN
 我安装的是：
-![cuda7](E:/DeepLearning_study\md_pic\cuda7.png)
+![cuda7](md_pic/cuda7.png)
 下载解压后得到
-![cuda8](E:/DeepLearning_study\md_pic\cuda8.png)
+![cuda8](md_pic/cuda8.png)
 将这三个文件放到CUDA的文件夹中后安装成功
 
 
@@ -439,7 +439,7 @@ https://developer.nvidia.com/rdp/cudnn-archive
 ```
 https://pytorch.org/get-started/previous-versions/
 ```
-![cuda2](E:/DeepLearning_study\md_pic\cuda2.png)
+![cuda2](md_pic/cuda2.png)
 在此处找到pytorch对应的CUDA
     
 我使用的是1.12.0的torch,对应的CUDA版本为1.16，因此可以在官网找到指令
@@ -449,7 +449,7 @@ pip install torch==1.12.0+cu116 torchvision==0.13.0+cu116 torchaudio==0.12.0 --e
 打开anaconda prompt，在对应的conda环境中输入该指令，即开始安装CUDA版本的pytorch
 
 安装成功后可看到
-![cuda3](E:/DeepLearning_study\md_pic\cuda3.png)
+![cuda3](md_pic/cuda3.png)
 安装成功
 
 
@@ -519,5 +519,5 @@ www.clashverge.dev中下载的clashverge在安装时会出现"clash-verge : 依�
 https://github.com/KalosAner/KalosAner.github.io/blob/master/resource/software/clash-verge_1.7.6_amd64.deb
 ```
 安装好后配置好文件成功打开youtube说明安装成功
-![online](E:/DeepLearning_study\md_pic\online.png)
+![online](md_pic/online.png)
 
