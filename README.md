@@ -353,6 +353,7 @@ ssh -V
 编辑器Vim：可以使用命令来编辑，完全脱离鼠标
 
 Vim工作模式：命令模式、编辑模式、末行模式
+
 ![linux14](md_pic/linux14.png)
 
 ```
@@ -428,9 +429,13 @@ https://developer.nvidia.com/rdp/cudnn-archive
 ```
 注意网站中的for CUDA xx.x，根据此来安装对应的cuDNN
 我安装的是：
+
 ![cuda7](md_pic/cuda7.png)
+
 下载解压后得到
+
 ![cuda8](md_pic/cuda8.png)
+
 将这三个文件放到CUDA的文件夹中后安装成功
 
 
@@ -440,6 +445,7 @@ https://developer.nvidia.com/rdp/cudnn-archive
 https://pytorch.org/get-started/previous-versions/
 ```
 ![cuda2](md_pic/cuda2.png)
+
 在此处找到pytorch对应的CUDA
     
 我使用的是1.12.0的torch,对应的CUDA版本为1.16，因此可以在官网找到指令
@@ -449,7 +455,9 @@ pip install torch==1.12.0+cu116 torchvision==0.13.0+cu116 torchaudio==0.12.0 --e
 打开anaconda prompt，在对应的conda环境中输入该指令，即开始安装CUDA版本的pytorch
 
 安装成功后可看到
+
 ![cuda3](md_pic/cuda3.png)
+
 安装成功
 
 
