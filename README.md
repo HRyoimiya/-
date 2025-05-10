@@ -47,7 +47,7 @@
 - cp文件夹需要用 -r
 - mv不需要用 -r
 
-![linux2](E:/DeepLearning_study\md_pic\linux2.png)
+![linux2](md_pic\linux2.png)
 ##### 5、终端命令的格式
 eg.
 |命令|格式|参数|
