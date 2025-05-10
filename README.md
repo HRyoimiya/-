@@ -530,7 +530,7 @@ www.clashverge.dev
 略
 
 ##### 3、应用于linux
-www.clashverge.dev中下载的clashverge在安装时会出现"clash-verge : 依赖: libwebkit2gtk-4.1-0 但无法安装它"的报错，因此换了另一个版本的clashverge
+在www.clashverge.dev中下载的clashverge在安装时会出现 "clash-verge : 依赖: libwebkit2gtk-4.1-0 但无法安装它" 的问题，因此换了另一个版本的clashverge
 ```
 https://github.com/KalosAner/KalosAner.github.io/blob/master/resource/software/clash-verge_1.7.6_amd64.deb
 ```
