@@ -48,6 +48,7 @@
 - mv不需要用 -r
 
 ![linux2](md_pic/linux2.png)
+
 ##### 5、终端命令的格式
 eg.
 |命令|格式|参数|
@@ -64,6 +65,7 @@ eg.
 |-a|显示隐藏文件和目录|
 
 ![linux1](md_pic/linux1.png)
+
 r读w写x执行。前三个表示自己的权限；中间表示同组用户；最后表示其他用户
 2表示硬连接次数
 Yoimiya表示用户名；yoimiya表示用户组；4096表示大小；修改时间；名字
@@ -335,9 +337,11 @@ ssh -V
 ```
 ###### 17.1、远程登录
 使用windows连接linux
+
 ![linux11](md_pic/linux11.png)
 
 在linux中查看
+
 ![linux12](md_pic/linux12.png)
 
 连接成功
@@ -407,6 +411,7 @@ https://www.anaconda.com/download
 nvidia-smi
 ```
 ![cuda1](md_pic/cuda1.png)
+
 CUDA Version为CUDA支持的最高版本
 
 ###### 2.2下载CUDA
@@ -414,12 +419,15 @@ CUDA Version为CUDA支持的最高版本
 https://developer.nvidia.com/cuda-toolkit-archive
 ```
 我下载的为11.6.2版本的CUDA：
+
 ![cuda6](md_pic/cuda6.png)
+
 正常下载安装后在cmd中输入
 ```
 nvcc -V
 ```
 ![cuda5](md_pic/cuda5.png)
+
 当看到上图所示即为安装成功
 
 ###### 2.3安装cuDNN
@@ -527,5 +535,6 @@ www.clashverge.dev中下载的clashverge在安装时会出现"clash-verge : 依�
 https://github.com/KalosAner/KalosAner.github.io/blob/master/resource/software/clash-verge_1.7.6_amd64.deb
 ```
 安装好后配置好文件成功打开youtube说明安装成功
+
 ![online](md_pic/online.png)
 
