@@ -494,22 +494,50 @@ nvcc -V
 
 ![cuda012](md_pic/cuda012.png)
 
-###### 3、安装cuDNN
+##### 3、安装cuDNN(后续修订版)
+
+###### 3.1/下载cuDNN
 打开网址
 ```
 https://developer.nvidia.com/rdp/cudnn-archive
 ```
 注意网站中的for CUDA xx.x，根据此来安装对应的cuDNN
-我安装的是：
 
-![cuda7](md_pic/cuda7.png)
+我们安装的版本如下图：
 
-下载解压后得到
+![cuda013](md_pic/cuda013.png)
 
-![cuda8](md_pic/cuda8.png)
+###### 3.2、拷贝到服务器上并安装
 
-将这三个文件放到CUDA的文件夹中后安装成功
+下载完成后将其拷贝到服务器上
 
+拷贝后，进入拷贝后的文件夹输入指令安装cuDNN
+
+```
+tar -xvf cudnn-linux-x86_64-8.9.7.29_cuda12-archive.tar.xz
+```
+
+安装后依次输入以下指令，将文件拷贝到CUDA中
+
+```
+cd cudnn-linux-x86_64-8.9.7.29_cuda12-archive
+sudo cp lib/* /usr/local/cuda-12.8/lib64/
+sudo cp include/* /usr/local/cuda-12.8/include/
+sudo chmod a+r /usr/local/cuda-12.8/lib64/*
+sudo chmod a+r /usr/local/cuda-12.8/include/*
+```
+
+###### 3.3、查看是否安装成功
+
+输入指令
+
+```
+cat /usr/local/cuda/include/cudnn_version.h | grep CUDNN_MAJOR -A 2
+```
+
+![cuda014](md_pic/cuda014.png)
+
+安装成功
 
 ##### 4、安装CUDA对应版本的pytorch
 
