@@ -412,11 +412,11 @@ https://www.anaconda.com/download
 nvidia-smi
 ```
 
-![cuda01](E:/DeepLearning_study\md_pic\cuda01.png)
+![cuda01](md_pic/cuda01.png)
 
 这里最高支持12.8，而本服务器已经有12.4版本的CUDA，版本过低，因此重装一个12.8的CUDA
 
-![cuda02](E:/DeepLearning_study\md_pic\cuda02.png)
+![cuda02](md_pic/cuda02.png)
 
 ###### 2.2、从官网找到CUDA安装包
 
@@ -426,21 +426,21 @@ https://developer.nvidia.com/cuda-toolkit-archive
 
 根据服务器版本选择对应的CUDA
 
-![cuda04](E:/DeepLearning_study\md_pic\cuda04.png)
+![cuda04](md_pic/cuda04.png)
 
 
-![cuda03](E:/DeepLearning_study\md_pic\cuda03.png)
+![cuda03](md_pic/cuda03.png)
 
 ###### 2.3、安装CUDA
 
 在终端中执行安装命令(上图红框)
 
-![cuda08](E:/DeepLearning_study\md_pic\cuda08.png)
+![cuda08](md_pic/cuda08.png)
 下载完成
 
 下载完CUDA开始安装，出现以下界面
 
-![cuda05](E:/DeepLearning_study\md_pic\cuda05.png)
+![cuda05](md_pic/cuda05.png)
 
 此界面下，前三个选项分别表示：
 1.是否跳过安装与OpenGL相关的驱动文件
@@ -453,15 +453,15 @@ Override kernel module type 表示是否强制指定NVIDIA内核模块的类型�
 
 之后选择Done
 
-![cuda06](E:/DeepLearning_study\md_pic\cuda06.png)
+![cuda06](md_pic/cuda06.png)
 
 由于已经下载了驱动，故把驱动项取消,之后选择install
 
-![cuda07](E:/DeepLearning_study\md_pic\cuda07.png)
+![cuda07](md_pic/cuda07.png)
 
 因为本服务器之前已经安装了一个CUDA，安装程序询问是否要将此符号链接更新为指向新安装的CUDA版本，这里选择yes，后续将不再使用旧版本CUDA
 
-![cuda09](E:/DeepLearning_study\md_pic\cuda09.png)
+![cuda09](md_pic/cuda09.png)
 安装完毕
 
 ###### 2.4、配置环境变量
@@ -476,7 +476,7 @@ echo $PATH
 echo $LD_LIBRARY_PATH
 ```
 
-![cuda010](E:/DeepLearning_study\md_pic\cuda010.png)
+![cuda010](md_pic/cuda010.png)
 
 这是旧版本的CUDA，现在需要换成新版本的CUDA
 
@@ -484,7 +484,7 @@ echo $LD_LIBRARY_PATH
 
 再次运行上述指令发现已经正确
 
-![cuda011](E:/DeepLearning_study\md_pic\cuda011.png)
+![cuda011](md_pic/cuda011.png)
 
 查看CUDA版本
 
@@ -492,7 +492,7 @@ echo $LD_LIBRARY_PATH
 nvcc -V
 ```
 
-![cuda012](E:/DeepLearning_study\md_pic\cuda012.png)
+![cuda012](md_pic/cuda012.png)
 
 ###### 3、安装cuDNN
 打开网址
