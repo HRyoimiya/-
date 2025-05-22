@@ -404,33 +404,97 @@ https://www.anaconda.com/download
 ```
 正常下载安装，之后可以在anaconda prompt中安装多个不同的conda环境以及python的各种库
 
-##### 2、CUDA和cuDNN安装
+##### 2、安装CUDA(后续修订版)
+###### 2.1、首先查看服务器支持的最高版本的CUDA
 
-###### 2.1首先需要NVIDIA显卡，在cmd中输入
+输入指令：
 ```
 nvidia-smi
 ```
-![cuda1](md_pic/cuda1.png)
 
-CUDA Version为CUDA支持的最高版本
+![cuda01](E:/DeepLearning_study\md_pic\cuda01.png)
 
-###### 2.2下载CUDA
+这里最高支持12.8，而本服务器已经有12.4版本的CUDA，版本过低，因此重装一个12.8的CUDA
+
+![cuda02](E:/DeepLearning_study\md_pic\cuda02.png)
+
+###### 2.2、从官网找到CUDA安装包
+
 ```
 https://developer.nvidia.com/cuda-toolkit-archive
 ```
-我下载的为11.6.2版本的CUDA：
 
-![cuda6](md_pic/cuda6.png)
+根据服务器版本选择对应的CUDA
 
-正常下载安装后在cmd中输入
+![cuda04](E:/DeepLearning_study\md_pic\cuda04.png)
+
+
+![cuda03](E:/DeepLearning_study\md_pic\cuda03.png)
+
+###### 2.3、安装CUDA
+
+在终端中执行安装命令(上图红框)
+
+![cuda08](E:/DeepLearning_study\md_pic\cuda08.png)
+下载完成
+
+下载完CUDA开始安装，出现以下界面
+
+![cuda05](E:/DeepLearning_study\md_pic\cuda05.png)
+
+此界面下，前三个选项分别表示：
+1.是否跳过安装与OpenGL相关的驱动文件
+2.是否跳过安装nvidia-drm内核模块
+3.是否更新系统的X Window配置文件（xorg.conf），以使用NVIDIA专有驱动
+
+由于本服务器无图形界面，故这三个选项均勾选(即不要安装此项内容)
+
+Override kernel module type 表示是否强制指定NVIDIA内核模块的类型，保持默认，不勾选
+
+之后选择Done
+
+![cuda06](E:/DeepLearning_study\md_pic\cuda06.png)
+
+由于已经下载了驱动，故把驱动项取消,之后选择install
+
+![cuda07](E:/DeepLearning_study\md_pic\cuda07.png)
+
+因为本服务器之前已经安装了一个CUDA，安装程序询问是否要将此符号链接更新为指向新安装的CUDA版本，这里选择yes，后续将不再使用旧版本CUDA
+
+![cuda09](E:/DeepLearning_study\md_pic\cuda09.png)
+安装完毕
+
+###### 2.4、配置环境变量
+
+输入以下指令
+
+```
+echo $PATH
+```
+
+```
+echo $LD_LIBRARY_PATH
+```
+
+![cuda010](E:/DeepLearning_study\md_pic\cuda010.png)
+
+这是旧版本的CUDA，现在需要换成新版本的CUDA
+
+直接使用vscode在服务器的.bashrc文件中将原有的12.4版本的CUDA路径换成新的12.8版本的CUDA路径即可
+
+再次运行上述指令发现已经正确
+
+![cuda011](E:/DeepLearning_study\md_pic\cuda011.png)
+
+查看CUDA版本
+
 ```
 nvcc -V
 ```
-![cuda5](md_pic/cuda5.png)
 
-当看到上图所示即为安装成功
+![cuda012](E:/DeepLearning_study\md_pic\cuda012.png)
 
-###### 2.3安装cuDNN
+###### 3、安装cuDNN
 打开网址
 ```
 https://developer.nvidia.com/rdp/cudnn-archive
@@ -447,7 +511,7 @@ https://developer.nvidia.com/rdp/cudnn-archive
 将这三个文件放到CUDA的文件夹中后安装成功
 
 
-##### 3、安装CUDA对应版本的pytorch
+##### 4、安装CUDA对应版本的pytorch
 
 ```
 https://pytorch.org/get-started/previous-versions/
